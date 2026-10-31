@@ -1,4 +1,4 @@
- #Architecture — Mini AI Business Intelligence Assistant
+#Architecture — Mini AI Business Intelligence Assistant
 
 This document focuses on component boundaries and how requests and data move through the application. General setup instructions, feature descriptions, example questions, and detailed test results remain in `README.md`.
 
