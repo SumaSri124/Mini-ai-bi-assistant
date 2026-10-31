@@ -402,5 +402,3 @@ With additional development time, the following improvements would be valuable:
 - Return useful error messages without exposing credentials or sensitive internal details.
 
 ---
-
-**Project Repository:** https://github.com/SumaSri124/AI-bi-assistant
