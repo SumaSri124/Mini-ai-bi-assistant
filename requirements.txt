@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pandas
+streamlit
+requests
+pytest
+httpx
+python-dotenv
+sqlglot
+google-genai

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini AI Business Intelligence Assistant</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <div>
+                    <h2>Mini AI</h2>
+                    <p>Business Intelligence</p>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="section-label">WORKSPACE</p>
+                <a class="nav-item active" href="/">▦ &nbsp; Dashboard</a>
+                <a class="nav-item" href="/docs" target="_blank">↗ &nbsp; API Documentation</a>
+            </div>
+
+            <div class="connection-card">
+                <span class="status-dot"></span>
+                <div>
+                    <strong>Backend status</strong>
+                    <p id="connection-status">Checking connection...</p>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">Powered by Gemini + SQLite</div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <span>Workspace / Dashboard</span>
+                <span class="topbar-badge">AI ANALYTICS</span>
+            </header>
+
+            <section class="welcome">
+                <p class="eyebrow">YOUR DATA, UNDERSTOOD</p>
+                <h1>Business insights, <span>made simple.</span></h1>
+                <p>Ask questions about your sales data in plain English. Get answers backed by real database queries.</p>
+            </section>
+
+            <section class="question-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Ask your data</h2>
+                        <p>Enter a business question to get started.</p>
+                    </div>
+                    <span class="ai-badge">✦ AI POWERED</span>
+                </div>
+
+                <label for="question">YOUR QUESTION</label>
+                <textarea id="question" rows="3" placeholder="e.g. Which product generated the highest revenue?"></textarea>
+
+                <div class="input-footer">
+                    <span>Ask about revenue, products, regions, or trends.</span>
+                    <button id="ask-button" type="button">✦ Ask AI <span>→</span></button>
+                </div>
+            </section>
+
+            <section class="examples-section">
+                <h3>TRY ASKING</h3>
+                <div class="example-grid">
+                    <button class="example-card" data-question="What is the total revenue?">
+                        <span class="example-icon purple">₹</span>
+                        <span><strong>Total revenue</strong><small>How much did we earn?</small></span>
+                        <span class="card-arrow">↗</span>
+                    </button>
+
+                    <button class="example-card" data-question="Which product generated the highest revenue?">
+                        <span class="example-icon orange">↗</span>
+                        <span><strong>Top product</strong><small>Find the best performer.</small></span>
+                        <span class="card-arrow">↗</span>
+                    </button>
+
+                    <button class="example-card" data-question="Show monthly revenue trend.">
+                        <span class="example-icon blue">▥</span>
+                        <span><strong>Monthly trend</strong><small>Explore revenue over time.</small></span>
+                        <span class="card-arrow">↗</span>
+                    </button>
+
+                    <button class="example-card" data-question="Which region has the highest sales?">
+                        <span class="example-icon green">◎</span>
+                        <span><strong>Top region</strong><small>Compare regional performance.</small></span>
+                        <span class="card-arrow">↗</span>
+                    </button>
+
+                    <button class="example-card" data-question="Compare revenue between January 2026 and February 2026.">
+                        <span class="example-icon pink">↕</span>
+                        <span><strong>Revenue change</strong><small>Compare two months.</small></span>
+                        <span class="card-arrow">↗</span>
+                    </button>
+                </div>
+            </section>
+
+            <section id="result-section" class="result-section" hidden>
+                <div class="result-heading">
+                    <div>
+                        <p class="eyebrow">ANALYSIS RESULT</p>
+                        <h2>Your answer</h2>
+                    </div>
+                    <span id="result-status" class="result-status">SUCCESS</span>
+                </div>
+
+                <div class="answer-card">
+                    <div class="answer-symbol">✦</div>
+                    <div>
+                        <p class="answer-label">AI INSIGHT</p>
+                        <p id="answer-text"></p>
+                    </div>
+                </div>
+
+                <div class="data-panel">
+                    <h3>Supporting data</h3>
+                    <div class="table-wrapper">
+                        <table id="results-table">
+                            <thead></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <p id="table-empty" hidden>No supporting rows returned.</p>
+                </div>
+
+                <details class="sql-panel">
+                    <summary>View generated SQL</summary>
+                    <pre><code id="sql-text"></code></pre>
+                </details>
+            </section>
+
+            <footer class="page-footer">
+                Mini AI Business Intelligence Assistant
+                <span>Answers grounded in your sales database</span>
+            </footer>
+        </main>
+    </div>
+
+    <script src="/frontend/script.js"></script>
+</body>
+</html>
