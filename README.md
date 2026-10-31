@@ -276,7 +276,3 @@ The current test suite contains 27 tests, which passed during development.
 - Use read-only database access for analytical queries.
 - Validate all generated SQL before execution.
 - Avoid exposing internal exceptions or sensitive configuration details to users.
-
-## License
-
-Add an appropriate license if the project is intended for public distribution.
